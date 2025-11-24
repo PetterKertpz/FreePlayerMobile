@@ -1,0 +1,85 @@
+{
+  "meta": {
+    "project_name": "FreePlayerM",
+    "version": "0.0.0-genesis",
+    "created_at": "2025-11-23",
+    "last_updated": "2025-11-23T18:51:53.623830",
+    "owner": "David Lopez"
+  },
+  "context": {
+    "current_phase": "PHASE_0_DEFINITION",
+    "current_sprint": "Sprint 0: Genesis",
+    "health_status": "SETUP_MODE",
+    "blocking_issues": []
+  },
+  "governance": {
+    "architecture_style": "Clean Architecture + Modular Monolith",
+    "tech_stack": {
+      "language": "Kotlin 2.2 (K2)",
+      "ui": "Jetpack Compose (Material 3)",
+      "di": "Hilt",
+      "async": "Coroutines + Flow",
+      "db": "Room",
+      "build": "Gradle Kotlin DSL + Version Catalogs"
+    },
+    "rules": [
+      "Contract-First: Interfaces defined in Domain before Implementation",
+      "Single Source of Truth: Manifest drives development",
+      "No XML Layouts allowed",
+      "Strict separation of concerns (Data != Domain != UI)"
+    ]
+  },
+  "structure": {
+    "modules": {
+      "app": {
+        "type": "application",
+        "status": "active",
+        "description": "DI Entry Point & Navigation Host"
+      },
+      "core": {
+        "status": "planned",
+        "submodules": []
+      },
+      "features": {
+        "status": "planned",
+        "submodules": []
+      }
+    },
+    "artifacts": {
+      "docs_path": "docs/",
+      "roadmap_path": "docs/ROADMAP.md",
+      "adrs_path": "docs/adrs/",
+      "design_path": "docs/design/"
+    }
+  },
+  "workflow": {
+    "active_ticket": null,
+    "queue": [
+      {
+        "id": "DEF-001",
+        "type": "docs",
+        "title": "Vision & Business Logic Extraction",
+        "priority": "CRITICAL"
+      },
+      {
+        "id": "DEF-002",
+        "type": "docs",
+        "title": "UI/UX & Visual Requirements",
+        "priority": "HIGH"
+      },
+      {
+        "id": "DEF-003",
+        "type": "docs",
+        "title": "Data Schema & Architecture",
+        "priority": "HIGH"
+      },
+      {
+        "id": "DEF-004",
+        "type": "docs",
+        "title": "Master Roadmap Generation",
+        "priority": "HIGH"
+      }
+    ],
+    "history": []
+  }
+}

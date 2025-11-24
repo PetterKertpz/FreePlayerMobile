@@ -1,0 +1,133 @@
+
+==============================================================================
+🤖 CONTEXTO INMUTABLE V2 - FreePlayerM
+📅 GENERADO: 2025-11-23T00:00:42.011609
+==============================================================================
+
+--- 1. ESTADO DEL PROYECTO (MANIFEST) ---
+{
+  "meta": {
+    "project_name": "FreePlayerM",
+    "version": "0.1.0-alpha",
+    "last_updated": "2025-11-22T20:00:00"
+  },
+  "state": {
+    "phase": "PHASE_1_INFRASTRUCTURE",
+    "sprint": "Sprint 0",
+    "health_status": "HEALTHY"
+  },
+  "governance": {
+    "architecture": "Clean Architecture + Modular Monolith",
+    "strict_mode": true
+  },
+  "modules": {
+    "app": {
+      "status": "active",
+      "owner": "feature-team"
+    },
+    "core:database": {
+      "status": "construction",
+      "contracts": [
+        "SongDao",
+        "PlaylistDao"
+      ]
+    }
+  },
+  "backlog": {
+    "active_ticket": {
+      "id": "TASK-003",
+      "title": "Room Database Implementation",
+      "started_at": "2025-11-22T20:00:00"
+    },
+    "queue": [
+      "TASK-004: Navigation Base",
+      "TASK-005: Domain Contracts"
+    ],
+    "completed": [
+      "INFRA-001: Project Skeleton",
+      "TASK-001: Gradle Configuration",
+      "TASK-002: Hilt Setup"
+    ]
+  }
+}
+
+--- 2. REGLAS SUPREMAS (GLOBAL RULES) ---
+# GLOBAL RULES v2.0 - FreePlayerM
+
+## 1. Arquitectura & Diseño
+* **Clean Architecture:** Dependencias: `App -> Feature -> Domain <- Data`.
+* **Single Responsibility:** Una clase, una responsabilidad. Si supera 200 líneas, refactoriza.
+* **Contract-First:** NUNCA implementar lógica sin antes definir la `interface` en la capa Domain.
+* **Inmutabilidad:** Usa `val` por defecto. Usa `data class` para modelos.
+
+## 2. Stack Tecnológico (Estricto)
+* **Lenguaje:** Kotlin 2.x (K2 Compiler).
+* **UI:** Jetpack Compose (Material 3). NO XML layouts.
+* **Async:** Coroutines & Flow. NO RxJava. NO Callbacks.
+* **DI:** Hilt. NO Koin (por estandarización de este proyecto).
+* **DB:** Room con Flow.
+
+## 3. Estándares de Código
+* **Nomenclatura:**
+    * Clases: `PascalCase` (ej: `SongRepository`).
+    * Funciones/Variables: `camelCase` (ej: `getSongById`).
+    * Constantes: `UPPER_SNAKE_CASE` (ej: `MAX_RETRY_COUNT`).
+* **Result Pattern:** Los Repositories NUNCA lanzan excepciones. Retornan `Result<T>` o `Flow<Result<T>>`.
+* **UI State:** Cada pantalla tiene una única `data class UiState`.
+
+## 4. Flujo de Trabajo IA
+* **Contexto:** Cada prompt debe iniciar con el contenido de `snapshot.txt`.
+* **Validación:** Si la IA genera código que viola estas reglas, recházalo inmediatamente.
+* **Tests:** Cada Feature nueva debe incluir al menos un Test Unitario del ViewModel.
+
+--- 3. HISTORIA RECIENTE (ÚLTIMOS 5 COMMITS) ---
+dd9d876 - PetterMullerK, 2 hours ago : feat(mixed):  [TASK-003]
+75d7408 - PetterMullerK, 9 hours ago : feat(infra): setup multi-module gradle and hilt DI structure)
+28c2373 - PetterMullerK, 2 days ago : Agregado: Manifiesto v1, mantener estructura vacia a git
+d01a0e5 - PetterMullerK, 2 days ago : Comit config: Estructura del proyecto v1, herramientas y gobernanza de archivos v1
+f13ba0b - Petter Muller Kertpz, 2 days ago : Initial commit
+
+--- 4. MAPA DE ARCHIVOS (FILE TREE) ---
+.github/workflows/ci.yml
+.gitignore
+README.md
+app/.gitkeep
+app/build.gradle.kts
+app/src/main/AndroidManifest.xml
+app/src/main/java/com/freeplayerm/FreePlayerApp.kt
+app/src/main/java/com/freeplayerm/MainActivity.kt
+app/src/main/java/com/freeplayerm/di/AppModule.kt
+build.gradle.kts
+core/audio/.gitkeep
+core/audio/build.gradle.kts
+core/common/.gitkeep
+core/common/build.gradle.kts
+core/database/.gitkeep
+core/database/build.gradle.kts
+core/network/.gitkeep
+core/network/build.gradle.kts
+docs/GLOBAL_RULES.md
+docs/adrs/.gitkeep
+docs/adrs/0000-template.md
+docs/manifest.json
+docs/sprints/sprint-00-spec.md
+features/library/.gitkeep
+features/library/build.gradle.kts
+features/player/.gitkeep
+features/player/build.gradle.kts
+gradle.properties
+gradle/android/FakeDependency.jar
+gradle/libs.versions.toml
+gradle/native/0.2.8/x86_64-windows-gnu/gradle-fileevents.dll
+gradle/native/0.2.8/x86_64-windows-gnu/gradle-fileevents.dll.lock
+gradle/native/660c5614fbf4a5f2a75b1949f50a0caf5cd603558e7d8a26e50b933a0cfb79d1/windows-amd64/native-platform.dll
+gradle/native/660c5614fbf4a5f2a75b1949f50a0caf5cd603558e7d8a26e50b933a0cfb79d1/windows-amd64/native-platform.dll.lock
+gradle/native/jansi/1.18/windows64/jansi.dll
+settings.gradle.kts
+
+==============================================================================
+INSTRUCCIONES CRÍTICAS PARA LA IA:
+1. El MANIFEST en la sección 1 es la verdad absoluta sobre qué tarea estamos haciendo.
+2. Las GLOBAL RULES en la sección 2 son inquebrantables.
+3. Si el código solicitado ya existe en el MAPA DE ARCHIVOS, no lo dupliques.
+==============================================================================

@@ -1,0 +1,17 @@
+# <tipo>(<alcance>): <descripción corta> [ID-TICKET]
+#
+# Tipos permitidos:
+# feat      -> Nueva funcionalidad
+# fix       -> Corrección de error
+# docs      -> Cambios en documentación
+# style     -> Formato (espacios, comas, etc)
+# refactor  -> Código que no añade features ni arregla bugs
+# test      -> Añadir tests
+# chore     -> Mantenimiento, build, herramientas
+#
+# Ejemplo: feat(database): add SongEntity and DAO [TASK-003]
+#
+# ---------------------------------------------------------
+# El mensaje de arriba fue generado automáticamente basado en
+# tu 'manifest.json' y los archivos en 'staged'.
+# ---------------------------------------------------------
