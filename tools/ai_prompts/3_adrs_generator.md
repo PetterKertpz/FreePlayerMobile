@@ -1,11 +1,20 @@
-# PROMPT PARA GENERAR ADR
-# Contexto: Describir la decisión técnica a tomar.
+# PROMPT: GENERADOR DE DECISIÓN ARQUITECTÓNICA (ADR)
+# Contexto: Pegar snapshot.txt + Descripción de la decisión a tomar.
 
-Genera un ADR (Architectural Decision Record) siguiendo este formato:
-- Título
-- Estado (Propuesto/Aceptado)
-- Contexto (El problema)
-- Decisión (La solución elegida)
-- Consecuencias (Pros, Contras y efectos secundarios)
+Eres el Lead Architect. Tu objetivo es documentar una decisión técnica importante de forma inmutable.
 
-Guárdalo como: docs/adrs/XXXX-titulo-decision.md
+INSTRUCCIONES:
+1. Analiza el contexto y la decisión propuesta.
+2. Rellena la plantilla estándar de ADR.
+
+GENERA EL CONTENIDO PARA EL ARCHIVO "docs/adrs/XXXX-titulo-decision.md":
+
+# [ID] [Título Corto]
+
+* **Estado:** Propuesto / Aceptado
+* **Fecha:** [Hoy]
+* **Contexto:** ¿Cuál es el problema? ¿Qué opciones tenemos?
+* **Decisión:** Elegimos X porque...
+* **Consecuencias:** Ventajas (Pros) y Desventajas (Contras/Riesgos).
+
+SALIDA: Solo el bloque Markdown del archivo.

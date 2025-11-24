@@ -28,7 +28,8 @@ PROMPT_MAP = {
     "schema": "def_3_data.md",
 
     "roadmap": "def_4_roadmap.md", # El plan maestro inicial
-
+    "adr": "3_adrs_generator.md",
+    "decision": "3_adrs_generator.md",
     # ==========================================
     # VISUALIZACIÓN (Diagramas - Todo al Master)
     # ==========================================

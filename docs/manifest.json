@@ -3,13 +3,13 @@
     "project_name": "FreePlayerM",
     "version": "0.0.0-genesis",
     "created_at": "2025-11-23",
-    "last_updated": "2025-11-23T18:51:53.623830",
+    "last_updated": "2025-11-23T19:13:15.764717",
     "owner": "David Lopez"
   },
   "context": {
     "current_phase": "PHASE_0_DEFINITION",
     "current_sprint": "Sprint 0: Genesis",
-    "health_status": "SETUP_MODE",
+    "health_status": "WORKING",
     "blocking_issues": []
   },
   "governance": {
@@ -53,14 +53,14 @@
     }
   },
   "workflow": {
-    "active_ticket": null,
+    "active_ticket": {
+      "id": "DEF-001",
+      "type": "docs",
+      "title": "Vision & Business Logic Extraction",
+      "priority": "CRITICAL",
+      "started_at": "2025-11-23T19:09:57.225892"
+    },
     "queue": [
-      {
-        "id": "DEF-001",
-        "type": "docs",
-        "title": "Vision & Business Logic Extraction",
-        "priority": "CRITICAL"
-      },
       {
         "id": "DEF-002",
         "type": "docs",
